@@ -8,8 +8,8 @@ const session= require('express-session')
 const localStrategy = require('passport-local').Strategy;
 
 const validateUser=require('./routes/helpermethods/validatelogin')
-const env=require('dotenv');
-env.config();
+//const env=require('dotenv');
+//env.config();
 
 var app = express();
 
@@ -81,10 +81,8 @@ passport.deserializeUser(function(id, done){
 
 //set routes
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
 var loginRouter=require('./routes/login')
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
 app.use('/login', loginRouter);
 
 // catch 404 and forward to error handler
