@@ -115,7 +115,7 @@ passport.deserializeUser(function(id, done){
 
 //set routes
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+ 
 var loginRouter=require('./routes/login');
 var registerRouter=require('./routes/register');
 var profileRouter=require('./routes/profile');
