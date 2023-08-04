@@ -8,7 +8,7 @@ async function validateLogin(username,userpassword)
     .from('users')
     .select('*')
     .eq('username', username)
-    .eq('userpassword', userpassword)
+    //.eq('userpassword', userpassword)
     .then((d)=>{
       
         return d;
